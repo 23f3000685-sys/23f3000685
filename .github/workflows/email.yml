@@ -1,9 +1,10 @@
 name: Email
 
 on:
-  schedule:
-    # Runs at 12:00 UTC (noon) every day
-    - cron: "0 12 * * *"
+  push:
+    branches:
+      - main
+  pull_request:
 
 jobs:
   collect-iss-data:
